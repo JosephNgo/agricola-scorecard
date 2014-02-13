@@ -24,8 +24,8 @@ button {
 body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
-	background: #eaeaea url('fabric8.jpg');
-	background-size: 100% auto;
+	background: #eaeaea url('grunge5.jpg');
+	background-size: cover;
 	background-repeat: repeat;
 	background-attachment: fixed;
 	color: #4d4d4d;
@@ -377,8 +377,9 @@ label[for='toggle-all'] {
 
 #info {
 	margin: 65px auto 0;
-	color: #a6a6a6;
+	color: #000000;
 	font-size: 12px;
+	font-weight: bold;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 	text-align: center;
 }
