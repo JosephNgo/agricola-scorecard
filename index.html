@@ -19,8 +19,8 @@
 			<section id="todoapp">
 		      <header id="header">
 		        <h1>What&#39;s my score?</h1>
-		        <div id="totalScore"> Total Score: 0 </div>
-		        <button class="btn btn-primary" id="btn-calculate-score">Calculate Score</button>
+		        <div id="totalScore"> Total Score:  </div>
+		        <button class="btn btn-primary btn-lg btn-block" onclick="domScore()" id="calculate-score" >Calculate Score</button>
 		      </header>
 
 		      <section id="main">
@@ -83,14 +83,6 @@
 		        	<td>4 Points</td>
 		        </tr>
 		        <tr>
-		        	<td>Wild Boar</td>
-		        	<td>-1 Point</td>
-		        	<td>1 Point</td>
-		        	<td>2 Points</td>
-		        	<td>3 Points</td>
-		        	<td>4 Points</td>
-		        </tr>
-		        <tr>
 		        	<td>Cattle</td>
 		        	<td>-1 Point</td>
 		        	<td>1 Point</td>
@@ -132,7 +124,7 @@
 		        </tr>
 		        </table>
 		      </div>
-		        {{input type="checkbox" id="toggle-all" checked=allAreDone}}
+		        
 		      </section>
 
 		      <footer id="footer">
@@ -171,13 +163,22 @@
     <script type="text/javascript">
     var totalScore = 0;
     var getScores = 0;
-    var domScore = document.getElementById("totalScore");
+    var domScoreDiv = document.getElementById("totalScore");
+    var domScore = "";
+    domScore = "";
+    
 
     function getPoints (getScores) {
     	totalScore += getScores;
     	// alert("Total score: " + totalScore);
-    	domScore.innerHTML = "hello";
-    	console.log(totalScore);
+    	console.log("total score: " + totalScore);
+    	updateScore();
+    };
+
+    var updateScore = function() {
+    	domScoreDiv.innerHTML = totalScore + " points";
+    	console.log(domScoreDiv.innerHTML);
+    	// alert("works");
     };
 
 
