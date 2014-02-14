@@ -1,17 +1,9 @@
-First App with Ember: The To-do List
-====================================
+Agricola Scorecard App 
+======================
 
-My first attempt at using Ember.js
+Ember.js
 
-Learned the following:
-
-- MVC structure 
-
-- Using routes and child routes
-
-- Displaying model data
-
-- Toggle between different status' of todo items
+Made a way to calculate scores for the popular game, Agricola.
 
 
 Demo
