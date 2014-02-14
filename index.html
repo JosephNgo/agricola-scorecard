@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Where is Joe Ngo -- Agricoloa Scorecard</title>
+<title>Agricoloa Scorecard</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
@@ -19,6 +19,7 @@
 			<section id="todoapp">
 		      <header id="header">
 		        <h1>What&#39;s my score?</h1>
+		        <div id="totalScore"> Total Score: 0 </div>
 		        <button class="btn btn-primary" id="btn-calculate-score">Calculate Score</button>
 		      </header>
 
@@ -26,7 +27,23 @@
 		      <div class="table-responsive">
 		        <table class="table">
 		        <tr>
-		        	<td>Scoring</td>
+		        	<th>Scoring</th>
+		        	<th>-1 Point</th>
+		        	<th>1 Point</th>
+		        	<th>2 Points</th>
+		        	<th>3 Points</th>
+		        	<th>4 Points</th>
+		        </tr>
+		        <tr>
+		        	<td>Fields</td>
+		        	<td><button class="btn btn-default" onclick="getPoints(-1)">0-1</button></td>
+		        	<td><button class="btn btn-default" onclick="getPoints(1)">2</button></td>
+		        	<td><button class="btn btn-default"  onclick="getPoints(2)">3</button></td>
+		        	<td><button class="btn btn-default"  onclick="getPoints(3)">4</button></td>
+		        	<td><button class="btn btn-default"  onclick="getPoints(4)">5+</button></td>
+		        </tr>
+		        <tr>
+		        	<td>Pastures</td>
 		        	<td>-1 Point</td>
 		        	<td>1 Point</td>
 		        	<td>2 Points</td>
@@ -34,7 +51,7 @@
 		        	<td>4 Points</td>
 		        </tr>
 		        <tr>
-		        	<td>Scoring</td>
+		        	<td>Grain</td>
 		        	<td>-1 Point</td>
 		        	<td>1 Point</td>
 		        	<td>2 Points</td>
@@ -42,7 +59,7 @@
 		        	<td>4 Points</td>
 		        </tr>
 		        <tr>
-		        	<td>Scoring</td>
+		        	<td>Vegstables</td>
 		        	<td>-1 Point</td>
 		        	<td>1 Point</td>
 		        	<td>2 Points</td>
@@ -50,7 +67,7 @@
 		        	<td>4 Points</td>
 		        </tr>
 		        <tr>
-		        	<td>Scoring</td>
+		        	<td>Sheep</td>
 		        	<td>-1 Point</td>
 		        	<td>1 Point</td>
 		        	<td>2 Points</td>
@@ -58,7 +75,7 @@
 		        	<td>4 Points</td>
 		        </tr>
 		        <tr>
-		        	<td>Scoring</td>
+		        	<td>Wild Boar</td>
 		        	<td>-1 Point</td>
 		        	<td>1 Point</td>
 		        	<td>2 Points</td>
@@ -66,7 +83,7 @@
 		        	<td>4 Points</td>
 		        </tr>
 		        <tr>
-		        	<td>Scoring</td>
+		        	<td>Wild Boar</td>
 		        	<td>-1 Point</td>
 		        	<td>1 Point</td>
 		        	<td>2 Points</td>
@@ -74,7 +91,39 @@
 		        	<td>4 Points</td>
 		        </tr>
 		        <tr>
-		        	<td>Scoring</td>
+		        	<td>Cattle</td>
+		        	<td>-1 Point</td>
+		        	<td>1 Point</td>
+		        	<td>2 Points</td>
+		        	<td>3 Points</td>
+		        	<td>4 Points</td>
+		        </tr>
+		        <tr>
+		        	<td>Unused Spaces</td>
+		        	<td>-1 Point</td>
+		        	<td>1 Point</td>
+		        	<td>2 Points</td>
+		        	<td>3 Points</td>
+		        	<td>4 Points</td>
+		        </tr>
+		        <tr>
+		        	<td>Fenced Stable</td>
+		        	<td>-1 Point</td>
+		        	<td>1 Point</td>
+		        	<td>2 Points</td>
+		        	<td>3 Points</td>
+		        	<td>4 Points</td>
+		        </tr>
+		        <tr>
+		        	<td>House Type</td>
+		        	<td>-1 Point</td>
+		        	<td>1 Point</td>
+		        	<td>2 Points</td>
+		        	<td>3 Points</td>
+		        	<td>4 Points</td>
+		        </tr>
+		        <tr>
+		        	<td>Family Members</td>
 		        	<td>-1 Point</td>
 		        	<td>1 Point</td>
 		        	<td>2 Points</td>
@@ -117,6 +166,21 @@
     <footer id="info">
       <p>Double-click to edit a todo</p>
     </footer>
+    </script>
+
+    <script type="text/javascript">
+    var totalScore = 0;
+    var getScores = 0;
+    var domScore = document.getElementById("totalScore");
+
+    function getPoints (getScores) {
+    	totalScore += getScores;
+    	// alert("Total score: " + totalScore);
+    	domScore.innerHTML = "hello";
+    	console.log(totalScore);
+    };
+
+
     </script>
 
 	<script src="js/libs/jquery-1.10.2.js"></script>
